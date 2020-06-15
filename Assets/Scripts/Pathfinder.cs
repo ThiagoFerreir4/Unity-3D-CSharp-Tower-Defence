@@ -1,15 +1,15 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pathfinder : MonoBehaviour {
-
+public class Pathfinder : MonoBehaviour 
+{
 	[SerializeField] Waypoint startWaypoint, endWaypoint;
-
 	Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
 	Queue<Waypoint> queue = new Queue<Waypoint>();
-	[SerializedField] bool isRunning = true; // Make it private 
+	[SerializeField] bool isRunning = true; // Make it private 
 
 	Vector2Int[] directions = {
 		Vector2Int.up,
@@ -31,13 +31,16 @@ public class Pathfinder : MonoBehaviour {
     {
         queue.Enqueue(startWaypoint);
 
-		while(queue.Count > 0)
+		while(queue.Count > 0 && isRunning)
         {
 			var searchCenter = queue.Dequeue();
 			print("Searching from: " + searchCenter); // Todo remove log
 			HaltIfEndFound(searchCenter);
-        }
+			ExploreNeighbours(searchCenter);
+			searchCenter.isExplored = true;
+		}
 
+		// Todo work-out path!
 		print("Finished pathfinding?");
     }
 
@@ -50,20 +53,37 @@ public class Pathfinder : MonoBehaviour {
 		}
     }
 
-    private void ExploreNeighbours()
+    private void ExploreNeighbours(Waypoint from)
     {
+		if (!isRunning) { return; }
+
         foreach (Vector2Int direction in directions)
         {
-			Vector2Int explorationCoordinates = startWaypoint.GetGridPos() + direction;
+			Vector2Int neighbourCoordinates = from.GetGridPos() + direction;
 			try
-			{
-				grid[explorationCoordinates].SetTopColor(Color.blue);
-			}
-			catch
+            {
+                QueueNewNeighbours(neighbourCoordinates);
+            }
+            catch
             {
 				// Do Nothing
             }
         }
+    }
+
+    private void QueueNewNeighbours(Vector2Int neighbourCoordinates)
+    {
+        Waypoint neighbour = grid[neighbourCoordinates];
+		if (neighbour.isExplored)
+		{
+			// do nothing
+		}
+		else
+		{
+			neighbour.SetTopColor(Color.blue); // todo move later
+			queue.Enqueue(neighbour);
+			print("Queueing " + neighbour);
+		}
     }
 
     private void ColorStartAndEnd()
