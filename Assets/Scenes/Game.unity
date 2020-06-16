@@ -444,7 +444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startWaypoint: {fileID: 1025240156}
   endWaypoint: {fileID: 1565202262}
-  isRunning: 1
 --- !u!1001 &917499697
 Prefab:
   m_ObjectHideFlags: 0
@@ -916,8 +915,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577236631}
-  m_LocalRotation: {x: 0.36656138, y: -0.0000043661967, z: 0.000007489807, w: 0.9303939}
-  m_LocalPosition: {x: 21.60399, y: 59.02529, z: -50.722313}
+  m_LocalRotation: {x: 0.57843584, y: 0.0012211305, z: -0.0008593237, w: 0.8157266}
+  m_LocalPosition: {x: 27.730303, y: 76.333244, z: -25.921608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
