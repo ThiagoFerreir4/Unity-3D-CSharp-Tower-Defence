@@ -17,8 +17,6 @@ public class Waypoint : MonoBehaviour
 		return gridSize;
     }
 
-	// Consider setting own color in Update()
-
 	public Vector2Int GetGridPos()
     {
 		return new Vector2Int(
@@ -27,9 +25,8 @@ public class Waypoint : MonoBehaviour
 		);
 	}
 
-	public void SetTopColor(Color color)
-    {
-	MeshRenderer topMeshRenderer  = transform.Find("Top").GetComponent<MeshRenderer>();
-	topMeshRenderer.material.color = color;
-    }
+	void OnMouseOver()
+	{
+		print(gameObject.name);
+	}
 }

@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4376884542353936}
   - component: {fileID: 114603308855878360}
   - component: {fileID: 114695365697270298}
+  - component: {fileID: 65864426784277644}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -87,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981966761387840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: -10}
+  m_LocalPosition: {x: 20, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4848227713155332}
@@ -265,6 +266,18 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65864426784277644
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981966761387840}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!102 &102968758021431466
 TextMesh:
   serializedVersion: 3
@@ -272,7 +285,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1929295535978228}
-  m_Text: 1,-1
+  m_Text: 2,-2
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
