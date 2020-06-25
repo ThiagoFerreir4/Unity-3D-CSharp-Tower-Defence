@@ -757,7 +757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 78
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -765,23 +765,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.48715833
+      value: 0.49127582
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.004995177
+      value: 0.004981919
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.0027812684
+      value: -0.0028048602
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.873295
+      value: 0.8709853
       objectReference: {fileID: 0}
     - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4157764437500654, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 58.85
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa527163d508c6747a60164a88b4c20e, type: 2}
@@ -5534,9 +5538,10 @@ Transform:
   - {fileID: 150430484}
   - {fileID: 1125872225}
   - {fileID: 1936171744}
-  - {fileID: 2035352591}
+  - {fileID: 250441485}
   - {fileID: 1357204278}
   - {fileID: 1571201692}
+  - {fileID: 2035352591}
   - {fileID: 1068034573}
   - {fileID: 1684585431}
   - {fileID: 1749147562}
@@ -5544,7 +5549,6 @@ Transform:
   - {fileID: 1944067513}
   - {fileID: 142640300}
   - {fileID: 454158755}
-  - {fileID: 250441485}
   - {fileID: 379795624}
   - {fileID: 1728287505}
   - {fileID: 27415560}
