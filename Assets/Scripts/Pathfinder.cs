@@ -53,15 +53,15 @@ public class Pathfinder : MonoBehaviour {
 
     private void SetAsPath(Waypoint waypoint)
     {
-        path.Add(endWaypoint);
-        endWaypoint.isPlaceable = false;
+        path.Add(waypoint);
+        waypoint.isPlaceable = false;
     }
 
     private void BreadthFirstSearch()
     {
         queue.Enqueue(startWaypoint);
 
-        while (queue.Count > 0 && isRunning)
+        while(queue.Count > 0 && isRunning)
         {
             searchCenter = queue.Dequeue();
             HaltIfEndFound();

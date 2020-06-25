@@ -15,10 +15,11 @@ public class PlayerHealth : MonoBehaviour {
         healthText.text = health.ToString();
     }
 
-    private void onTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         GetComponent<AudioSource>().PlayOneShot(playerDamageSFX);
         health -= healthDecrease;
         healthText.text = health.ToString();
     }
+
 }

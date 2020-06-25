@@ -9,25 +9,25 @@ public class EnemyMovement : MonoBehaviour {
     [SerializeField] ParticleSystem goalParticle;
 
     // Use this for initialization
-    void Start() 
+    void Start ()
     {
         Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
         var path = pathfinder.GetPath();
         StartCoroutine(FollowPath(path));
-    }
+	}
 
     IEnumerator FollowPath(List<Waypoint> path)
     {
-        print("Starting patrol...");
+        print("Starting patrol..."); 
         foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
             yield return new WaitForSeconds(movementPeriod);
         }
-        SelfDesctruct();
+        SelfDestruct();
     }
 
-    private void SelfDesctruct()
+    private void SelfDestruct()
     {
         var vfx = Instantiate(goalParticle, transform.position, Quaternion.identity);
         vfx.Play();
